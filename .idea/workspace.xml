@@ -15,8 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c93e32d-2ca2-4071-8e52-1b11b630e787" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled4.iws" />
@@ -84,7 +82,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="564" selection-end="564" vertical-scroll-proportion="0.3401109" vertical-offset="20" max-vertical-offset="561">
+            <state line="31" column="11" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.7171904" vertical-offset="20" max-vertical-offset="561">
               <folding>
                 <element signature="e#817#1042#0" expanded="true" />
                 <element signature="e#1031#1032#0" expanded="true" />
@@ -659,12 +657,16 @@
       <created>1394926254131</created>
       <updated>1394926254131</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added more screens&#10;">
+      <created>1394927113139</created>
+      <updated>1394927113139</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -679,7 +681,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1074,7 +1076,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="564" selection-end="564" vertical-scroll-proportion="0.3401109" vertical-offset="20" max-vertical-offset="561">
+        <state line="31" column="11" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.7171904" vertical-offset="20" max-vertical-offset="561">
           <folding>
             <element signature="e#817#1042#0" expanded="true" />
             <element signature="e#1031#1032#0" expanded="true" />

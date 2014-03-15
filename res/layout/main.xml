@@ -21,7 +21,17 @@
     <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.59"/>
+            android:layout_weight="0.24"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Welcome to Drink Or Drive"
+            android:id="@+id/textView3" android:layout_gravity="center_horizontal"/>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"/>
     <ImageButton
             android:layout_width="250dp"
             android:layout_height="50dp"
@@ -43,12 +53,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.13"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button" android:layout_gravity="center_horizontal"
-            android:background="@drawable/buttonbg" android:autoLink="none" android:paddingLeft="15dp"
-            android:paddingRight="15dp"/>
 
 </LinearLayout>

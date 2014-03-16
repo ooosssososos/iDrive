@@ -50,8 +50,8 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         int[] past_parties = new int[1];
         int[] friends = new int[1];
         json.put("cur_party", 1);
-        json.put("past_parties", past_parties);
-        json.put("friends", friends);
+        json.put("past_parties", java.util.Arrays.toString(past_parties));
+        json.put("friends", java.util.Arrays.toString(friends));
         json.put("name", Name);
         System.out.println(json.toString());
         return json;

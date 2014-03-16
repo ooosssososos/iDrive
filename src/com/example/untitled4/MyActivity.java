@@ -2,6 +2,7 @@ package com.example.untitled4;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.*;
 import org.apache.http.HttpResponse;
@@ -30,6 +31,10 @@ public class MyActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         Button bu = (Button)findViewById(R.id.button);
         bu.setOnClickListener(new View.OnClickListener() {
             @Override

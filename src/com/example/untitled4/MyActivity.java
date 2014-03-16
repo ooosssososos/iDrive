@@ -147,38 +147,38 @@ public class MyActivity extends Activity {
         ((Button)findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = -1;
                 setContentView(R.layout.modes);
+
             }
         });
     }
     public void update(){
         System.out.println("UPDATED");
         if(MyActivity.status == 1){
-            MyActivity.this.runOnUiThread(new Runnable(){
-                public void run(){
-                    ((TextView)findViewById(R.id.textView4)).setText(MyActivity.code+"");
+            MyActivity.this.runOnUiThread(new Runnable() {
+                public void run() {
+                    ((TextView) findViewById(R.id.textView4)).setText(MyActivity.code + "");
                     final ArrayList<String> list = new ArrayList<String>();
                     Party p = null;
-                    for(Party s : parties){
-                        if(s.getCode() == code){
+                    for (Party s : parties) {
+                        if (s.getCode() == code) {
                             p = s;
                             break;
                         }
                     }
                     for (int i : p.listOfPartyUsersId) {
-                        for(PartyUser z : users){
-                            if(z.getId() == i){
+                        for (PartyUser z : users) {
+                            if (z.getId() == i) {
                                 list.add(z.getName());
                                 break;
                             }
                         }
                     }
-                    ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(MyActivity.this, android.R.layout.simple_list_item_1,list ));
+                    ((ListView) findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(MyActivity.this, android.R.layout.simple_list_item_1, list));
                 }
             });
-            System.out.println("LobbyViewConfirmed");
             //Update Lobby
-            System.out.println(((TextView)findViewById(R.id.textView4)).getText());
 
 
         }else if(MyActivity.status == 2){

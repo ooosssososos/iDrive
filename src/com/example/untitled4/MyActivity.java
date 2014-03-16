@@ -52,6 +52,7 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.lobby);
+                registerLobby();
                 //Fill lobby with info TODO
             }
         });

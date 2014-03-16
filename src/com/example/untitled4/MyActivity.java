@@ -28,6 +28,8 @@ public class MyActivity extends Activity {
     public static int ID = -1;
     public static List<Promotion> promos;
     public static List<Party> parties;
+    public static JSONObject partyJSONObject;
+    public static Party partyRealObject;
     public static List<PartyUser> users;
     public static int party = -1;
     private static String KEY_SUCCESS = "success";
@@ -82,8 +84,26 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
                 codeString = ((EditText)findViewById(R.id.Name)).getText().toString();
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
+                Post post = new Post((EditText)findViewById(R.id.editText));
+                post.execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
+                partyJSONObject = post.party;
 
+                try {
+
+                    int partyId = partyJSONObject.getInt("id");
+
+                    int barId = partyJSONObject.getInt("cur_checkin_bar");
+
+                    boolean isClosed = partyJSONObject.getBoolean("closed");
+                    int code = partyJSONObject.getInt("code");
+
+                    partyRealObject = new Party(partyId, barId, isClosed, code);
+
+                } catch(JSONException je) {
+                    partyRealObject = null;
+                }
+
+                if (partyJSONObject == null){
 
 
                 AlertDialog alertDialog = new AlertDialog.Builder(MyActivity.this).create();
@@ -107,7 +127,11 @@ public class MyActivity extends Activity {
 
                 // Showing Alert Message
                 alertDialog.show();
+                } else {
+                    setContentView(R.layout.lobby);
+                    registerLobby();
 
+                }
                 //Fill lobby with info TODO
 
 
@@ -131,12 +155,14 @@ public class MyActivity extends Activity {
             ((TextView)findViewById(R.id.textView4)).setText(MyActivity.code);
             final ArrayList<String> list = new ArrayList<String>();
             Party p = null;
-            for(Party s : parties){
-                if(s.getCode() == code){
-                    p = s;
-                    break;
-                }
-            }
+//            for(Party s : parties){
+//                if(s.getCode() == code){
+//                    p = s;
+//                    break;
+//                }
+//            }
+            p = partyRealObject;
+
             for (int i : p.listOfPartyUsersId) {
                 for(PartyUser z : users){
                     if(z.getId() == i){

@@ -30,7 +30,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         d = v;
     }
 
-    JSONObject party = null;
+    public JSONObject party = null;
     @Override
     protected Long doInBackground(Instruction... i) {
         for(Instruction c : i){
@@ -93,7 +93,13 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         MyActivity.code = z.getInt("code");
                         break;
                     case 2:
-                        party = new JSONObject(tmp);
+                        JSONArray partyArray = new JSONArray(tmp);
+                        try {
+                            party = partyArray.getJSONObject(0);
+
+                        } catch(JSONException je) {
+                            party = null;
+                        }
                         System.out.println(party);
 
                 }

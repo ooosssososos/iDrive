@@ -87,7 +87,6 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 code = Integer.parseInt(((EditText) findViewById(R.id.Name)).getText().toString());
-                System.out.println("codesda: " + code);
                 codeString = ((EditText)findViewById(R.id.Name)).getText().toString();
                 Post post = new Post();
                 post.execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2)); 
@@ -149,6 +148,19 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 status = -1;
                 setContentView(R.layout.modes);
+                registerModes();
+            }
+        });
+    }
+    public void registerModes(){
+        ((Button)findViewById(R.id.Volunteer)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status = 2;
+                setContentView(R.layout.deals);
+                ((TextView)findViewById(R.id.textView)).setText(MyActivity.Username);
+
+
 
             }
         });
@@ -167,6 +179,7 @@ public class MyActivity extends Activity {
                             break;
                         }
                     }
+                    try{
                     for (int i : p.listOfPartyUsersId) {
                         for (PartyUser z : users) {
                             if (z.getId() == i) {
@@ -174,6 +187,9 @@ public class MyActivity extends Activity {
                                 break;
                             }
                         }
+                    }
+                    }catch(NullPointerException e){
+                        e.printStackTrace();
                     }
                     ((ListView) findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(MyActivity.this, android.R.layout.simple_list_item_1, list));
                 }
@@ -183,13 +199,15 @@ public class MyActivity extends Activity {
 
         }else if(MyActivity.status == 2){
             //Update Deals
-
+            MyActivity.this.runOnUiThread(new Runnable() {
+                public void run() {
             final ArrayList<String> list = new ArrayList<String>();
             for(Promotion s : promos){
                 list.add(s.getDescription());
             }
-            ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(this, android.R.layout.simple_list_item_1,list ));
-
+            ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(MyActivity.this, android.R.layout.simple_list_item_1,list ));
+                }
+            });
         }
     }
 
@@ -225,7 +243,6 @@ class UpdateThread extends Thread {
     @Override
     public void run() {
         while(true){
-            System.out.println("UpdateThread" + MyActivity.t);
             MyActivity.t.update();
 
             try{
@@ -250,7 +267,6 @@ class MyThread extends Thread{
             MyActivity.users = wb.getPartyUsers();
             wb.parsePromotion();
             MyActivity.promos =  wb.getPromos();
-            System.out.println("MythreadRan");
             try{
                 Thread.sleep(1000);
             }catch(Exception e){

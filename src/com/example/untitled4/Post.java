@@ -7,7 +7,9 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HTTP;
@@ -17,9 +19,10 @@ import org.json.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  * Created by ics on 15/03/14.
@@ -73,6 +76,14 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
 
                         break;
                     case 2:
+
+
+
+
+
+
+
+
                         String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
                         basePartyUrl+="?code=";
                         basePartyUrl+=MyActivity.code;
@@ -102,11 +113,30 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                     case 2:
                         try{
                         MyActivity.partyJSONObject = new JSONObject(tmp.substring(1,tmp.length()-1));
+                            JSONArray jarray = (JSONArray)MyActivity.partyJSONObject.get("active_members");
+                            int[] zf = new int[jarray.length()+1];
+                            for (int fd = 0; fd< jarray.length(); ++fd) {
+                                zf[fd] = jarray.optInt(fd);
+                            }
+                            zf[zf.length-1] = MyActivity.ID;
+                            JSONArray abbb = new JSONArray(zf);
+                            MyActivity.partyJSONObject.put("active_members", abbb);
+                            String url = c.a+MyActivity.partyJSONObject.get("id") + "/";
+                            HttpPut putRequest = new HttpPut(url);
+                            putRequest.addHeader("content-type", "application/json");
+                            StringEntity enti = new StringEntity(MyActivity.partyJSONObject.toString());
+
+                            System.out.println("sdafadadd: " + MyActivity.partyJSONObject.toString() + "      " + Arrays.toString(zf) + "               " + url);
+                            putRequest.setEntity(enti);
+                            HttpResponse res = httpclient.execute(putRequest);
+                            
+
                         }catch(Exception fe){
+                            fe.printStackTrace();
                             MyActivity.partyJSONObject = null;
                         }
-                        MyActivity.a=true;
                         MyActivity.status = 1;
+                        MyActivity.a=true;
                         System.out.println("irfe2: " + MyActivity.partyJSONObject);
                         break;
                 }

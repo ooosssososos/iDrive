@@ -51,13 +51,13 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Code: "
-                android:id="@+id/textView3"/>
+                android:id="@+id/textView3" android:textSize="40dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/textView4"/>
+                android:id="@+id/textView4" android:textSize="45dp"/>
     </LinearLayout>
     <Button
             android:layout_width="wrap_content"

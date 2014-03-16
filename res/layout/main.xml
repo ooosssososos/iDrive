@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
+            android:text="Points: 5"
             android:id="@+id/textView2" android:layout_gravity="right"/>
     <Space
             android:layout_width="match_parent"

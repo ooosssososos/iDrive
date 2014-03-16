@@ -10,7 +10,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:weightSum="1" >
+        android:weightSum="1" android:background="@drawable/bg">
 
         <Space
             android:layout_width="match_parent"

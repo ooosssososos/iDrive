@@ -7,7 +7,7 @@ public class UpdateThread extends Thread{
     public void run(){
         while(true){
 
-            MyActivity.update();
+            MyActivity.t.update();
 
             try{
                 Thread.sleep(1000);

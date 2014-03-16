@@ -10,12 +10,12 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HTTP;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONStringer;
+import org.apache.http.util.EntityUtils;
+import org.json.*;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -51,8 +51,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                 // Execute HTTP Post Request
                 httppost.addHeader("content-type", "application/json");
                 HttpResponse response = httpclient.execute(httppost);
-                JSONObject obj = new JSONObject(response.getEntity().getContent().toString());
-                MyActivity.code = Integer.parseInt((String)obj.get("code"));
+                System.out.println("Response : " + response.getEntity().getContent().toString());
 
             } catch (ClientProtocolException e) {
                 // TODO Auto-generated catch block

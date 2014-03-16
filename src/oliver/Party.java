@@ -8,7 +8,7 @@ public class Party {
 	private int id;
 	private int currentCheckingBar;
 	private boolean closed;
-	private List<Integer> listOfPartyUsersId;
+	public List<Integer> listOfPartyUsersId;
 	private List<Integer> pastMembersId = new ArrayList<Integer>();
 	private List<Integer> listOfDesignatedDriver;
 	private int code;

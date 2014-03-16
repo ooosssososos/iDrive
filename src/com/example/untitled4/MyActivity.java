@@ -3,6 +3,7 @@ package com.example.untitled4;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -16,16 +17,20 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
+    public static MyActivity t;
     public static String Username = "";
     public static int code = 0;
     public static int ID = -1;
@@ -39,6 +44,7 @@ public class MyActivity extends Activity {
     private static String KEY_UID = "uid";
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        t = this;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
@@ -126,7 +132,65 @@ public class MyActivity extends Activity {
             }
         });
     }
-    public static void update(){
+    public void update(){
+        View v = getWindow().getDecorView().getRootView();
+        if(v.getId() == R.layout.lobby){
+            //Update Lobby
 
+            final ArrayList<String> list = new ArrayList<String>();
+            Party p = null;
+            for(Party s : parties){
+                if(s.getCode() == code){
+                    p = s;
+                    break;
+                }
+            }
+            for (int i : p.listOfPartyUsersId) {
+                for(PartyUser z : users){
+                    if(z.getId() == i){
+                        list.add(z.getName());
+                        break;
+                    }
+                }
+            }
+            ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(this, android.R.layout.simple_list_item_1,list ));
+        }else if(v.getId() == R.layout.deals){
+            //Update Deals
+
+            final ArrayList<String> list = new ArrayList<String>();
+            for(Promotion s : promos){
+                list.add(s.getDescription());
+            }
+            ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(this, android.R.layout.simple_list_item_1,list ));
+
+        }
     }
+
 }
+class StableArrayAdapter extends ArrayAdapter<String> {
+
+    HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+
+
+    public StableArrayAdapter(Context context, int textViewResourceId,
+                              List<String> objects) {
+        super(context, textViewResourceId, objects);
+        for (int i = 0; i < objects.size(); ++i) {
+            mIdMap.put(objects.get(i), i);
+        }
+    }
+
+    @Override
+    public long getItemId(int position) {
+        String item = getItem(position);
+        return mIdMap.get(item);
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+}
+
+

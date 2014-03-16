@@ -92,4 +92,7 @@ public class MyActivity extends Activity {
             }
         });
     }
+    public static void update(){
+
+    }
 }

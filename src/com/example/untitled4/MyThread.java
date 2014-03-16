@@ -13,7 +13,6 @@ public class MyThread extends Thread{
             MyActivity.parties = wb.getParties();
             wb.parsePartyUsers();
             MyActivity.users = wb.getPartyUsers();
-
             wb.parsePromotion();
            MyActivity.promos =  wb.getPromos();
             try{

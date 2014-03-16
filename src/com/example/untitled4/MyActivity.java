@@ -15,6 +15,8 @@ public class MyActivity extends Activity {
      */
     public static String Username = "";
     public static int code = 0;
+    public static int ID = -1;
+    public static int party = -1;
     private static String KEY_SUCCESS = "success";
     private static String KEY_ERROR = "error";
     private static String KEY_ERROR_MSG = "error_msg";
@@ -29,7 +31,7 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Username = ((EditText)findViewById(R.id.editText)).getText().toString();
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username));
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username,0));
                 setContentView(R.layout.main);
                 ((TextView)findViewById(R.id.textView)).setText(Username + "");
                 register();

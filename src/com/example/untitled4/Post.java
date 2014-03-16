@@ -7,12 +7,18 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONStringer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Created by ics on 15/03/14.
@@ -25,43 +31,82 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     @Override
     protected Long doInBackground(Instruction... i) {
         for(Instruction c : i){
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost(c.a);
-        c.d = d.getText().toString();
-        try {
-            // Add your data
-            jsonResult(c.d);
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpPost httppost = new HttpPost(c.a);
+            c.d = d.getText().toString();
+            try {
+                // Add your data
+                StringEntity e = null;
+                switch(c.dat){
+                    case 0:
+                        e = new StringEntity(jsonResult(c.d).toString());
+                        break;
+                    case 1:
+                        e = new StringEntity(jsonResult1().toString());
+                        break;
+                }
+                httppost.setEntity(e);
 
-            // Execute HTTP Post Request
-            HttpResponse response = httpclient.execute(httppost);
 
-        } catch (ClientProtocolException e) {
-            // TODO Auto-generated catch block
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+                // Execute HTTP Post Request
+                httppost.addHeader("content-type", "application/json");
+                HttpResponse response = httpclient.execute(httppost);
+                JSONObject obj = new JSONObject(response.getEntity().getContent().toString());
+                MyActivity.code = Integer.parseInt((String)obj.get("code"));
+
+            } catch (ClientProtocolException e) {
+                // TODO Auto-generated catch block
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
         return 1L;
     }
+
+
     private JSONObject jsonResult(String Name) throws JSONException {
-        JSONObject json = new JSONObject();
-        int[] past_parties = new int[1];
-        int[] friends = new int[1];
-        json.put("cur_party", 1);
-        json.put("past_parties", java.util.Arrays.toString(past_parties));
-        json.put("friends", java.util.Arrays.toString(friends));
-        json.put("name", Name);
-        System.out.println(json.toString());
+        JSONObject json = null;
+        Object cur_party = JSONObject.NULL;
+        int past_parties[] = {1};
+        int friends[] = {1};
+        json = new JSONObject();
+        json.put("cur_party",cur_party);
+        json.put("past_parties",new JSONArray(past_parties));
+        json.put("name",Name);
+        json.put("friends",new JSONArray(friends));
+        System.out.println("Json: " + json);
+        return json;
+    }
+    private JSONObject jsonResult1() throws JSONException {
+        JSONObject json = null;
+        int past_parties[] = {1};
+        int active_member[] = {MyActivity.ID};
+        json = new JSONObject();
+        json.put("active_members",new JSONArray(active_member));
+        json.put("past_members", new JSONArray(past_parties));
+        System.out.println("Json: " + json);
+        return json;
+    }
+    private JSONObject jsonResult2(String Name) throws JSONException {
+        JSONObject json = null;
+        int past_parties[] = {1};
+        int active_member[] = {MyActivity.ID};
+        json = new JSONObject();
+        json.put("active_members",new JSONArray(active_member));
+        json.put("past_members", new JSONArray(past_parties));
+        System.out.println("Json: " + json);
         return json;
     }
 }
 class Instruction{
     String a;
     String d;
-    public Instruction(String URL, String Data){
+    int dat;
+    public Instruction(String URL, String Data, int in){
         a = URL;
         d = Data;
+        dat = in;
     }
 }

@@ -15,7 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c93e32d-2ca2-4071-8e52-1b11b630e787" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/MyThread.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/MyThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled4.iws" />
@@ -98,10 +100,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AsyncTask.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/AsyncTask.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="0" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="deals.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/deals.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="1.5555556" vertical-offset="59" max-vertical-offset="901">
+            <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.22222222" vertical-offset="23" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -110,19 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="Post.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="772" selection-end="784" vertical-scroll-proportion="0.44194108" vertical-offset="0" max-vertical-offset="577">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state line="58" column="27" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
@@ -137,19 +139,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/project.properties">
+      <file leaf-file-name="MyThread.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="12" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyThread.java">
+      <file leaf-file-name="DrinkOrDriveWebService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/oliver/DrinkOrDriveWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="273" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918">
+            <state line="147" column="0" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.33275563" vertical-offset="2103" max-vertical-offset="4624">
               <folding />
             </state>
           </provider>
@@ -158,16 +160,16 @@
       <file leaf-file-name="UpdateThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/UpdateThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
+            <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestClass.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/oliver/TestClass.java">
+      <file leaf-file-name="project.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/project.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="10" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -208,7 +210,6 @@
         <option value="$PROJECT_DIR$/res/layout/join.xml" />
         <option value="$PROJECT_DIR$/res/layout/start.xml" />
         <option value="$PROJECT_DIR$/src/com/example/untitled4/HTTP.java" />
-        <option value="$PROJECT_DIR$/src/com/example/untitled4/Post.java" />
         <option value="$PROJECT_DIR$/res/layout/deals.xml" />
         <option value="$PROJECT_DIR$/src/oliver/BarUser.java" />
         <option value="$PROJECT_DIR$/src/oliver/Party.java" />
@@ -216,9 +217,10 @@
         <option value="$PROJECT_DIR$/src/oliver/Promotion.java" />
         <option value="$PROJECT_DIR$/src/oliver/TestClass.java" />
         <option value="$PROJECT_DIR$/src/oliver/DrinkOrDriveWebService.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/untitled4/Post.java" />
         <option value="$PROJECT_DIR$/src/com/example/untitled4/MyThread.java" />
         <option value="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -322,6 +324,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="untitled4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Post.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -714,7 +738,11 @@
       <created>1394950714603</created>
       <updated>1394950714603</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1394954687327</created>
+      <updated>1394954687327</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -734,14 +762,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -775,24 +803,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="595">
           <folding>
-            <element signature="e#2987#4560#0" expanded="true" />
-            <element signature="e#4061#4409#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
-            <element signature="e#4549#4550#0" expanded="true" />
-            <element signature="e#4665#4829#0" expanded="true" />
-            <element signature="e#4818#4819#0" expanded="true" />
-            <element signature="e#5048#5056#0" expanded="true" />
-            <element signature="e#5782#5790#0" expanded="true" />
-            <element signature="e#6156#6173#0" expanded="true" />
+            <element signature="e#3229#4771#0" expanded="true" />
+            <element signature="e#4272#4620#0" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4760#4761#0" expanded="true" />
+            <element signature="e#4876#5040#0" expanded="true" />
+            <element signature="e#5029#5030#0" expanded="true" />
+            <element signature="e#5259#5267#0" expanded="true" />
+            <element signature="e#5993#6001#0" expanded="true" />
+            <element signature="e#6367#6384#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,15 +851,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="28" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding>
-            <element signature="e#2987#4560#0" expanded="true" />
-            <element signature="e#4061#4409#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
-            <element signature="e#4549#4550#0" expanded="true" />
-            <element signature="e#4665#4829#0" expanded="true" />
-            <element signature="e#4818#4819#0" expanded="true" />
-            <element signature="e#5048#5056#0" expanded="true" />
-            <element signature="e#5782#5790#0" expanded="true" />
-            <element signature="e#6156#6173#0" expanded="true" />
+            <element signature="e#3229#4771#0" expanded="true" />
+            <element signature="e#4272#4620#0" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4760#4761#0" expanded="true" />
+            <element signature="e#4876#5040#0" expanded="true" />
+            <element signature="e#5029#5030#0" expanded="true" />
+            <element signature="e#5259#5267#0" expanded="true" />
+            <element signature="e#5993#6001#0" expanded="true" />
+            <element signature="e#6367#6384#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -999,20 +1022,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/BarUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/PartyUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/platforms/android-19/android.jar!/org/json/JSONTokener.class">
@@ -1020,60 +1035,24 @@
         <state line="3" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oliver/DrinkOrDriveWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="49" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="641" max-vertical-offset="4828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/WebServiceException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="1" column="16" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/Promotion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/Party.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1972">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Downloads/java-json.jar!/org/json/JSONTokener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="7565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="273" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/UpdateThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="50" column="0" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="7565" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oliver/TestClass.java">
@@ -1083,33 +1062,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="164" selection-end="164" vertical-scroll-proportion="0.14782609" vertical-offset="0" max-vertical-offset="3281">
-          <folding>
-            <element signature="e#2987#4560#0" expanded="true" />
-            <element signature="e#4061#4409#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
-            <element signature="e#4549#4550#0" expanded="true" />
-            <element signature="e#4665#4829#0" expanded="true" />
-            <element signature="e#4818#4819#0" expanded="true" />
-            <element signature="e#5048#5056#0" expanded="true" />
-            <element signature="e#5782#5790#0" expanded="true" />
-            <element signature="e#6156#6173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
           <folding />
         </state>
       </provider>
@@ -1128,6 +1083,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="785" selection-end="785" vertical-scroll-proportion="0.3276644" vertical-offset="0" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services_lib.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
@@ -1135,9 +1097,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/platforms/android-19/android.jar!/android/os/AsyncTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/UpdateThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/adt-bundle-windows-x86_64-20131030/sdk/extras/google/google_play_services/libproject/google-play-services_lib/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="27" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/deals.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="1.5555556" vertical-offset="59" max-vertical-offset="901">
+        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.22222222" vertical-offset="23" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
@@ -1145,9 +1142,27 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="772" selection-end="784" vertical-scroll-proportion="0.44194108" vertical-offset="0" max-vertical-offset="577">
+        <state line="62" column="23" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.56666666" vertical-offset="663" max-vertical-offset="3315">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3229#4771#0" expanded="true" />
+            <element signature="e#4272#4620#0" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4760#4761#0" expanded="true" />
+            <element signature="e#4876#5040#0" expanded="true" />
+            <element signature="e#5029#5030#0" expanded="true" />
+            <element signature="e#5259#5267#0" expanded="true" />
+            <element signature="e#5993#6001#0" expanded="true" />
+            <element signature="e#6367#6384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oliver/DrinkOrDriveWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="0" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.33275563" vertical-offset="2103" max-vertical-offset="4624">
           <folding />
         </state>
       </provider>

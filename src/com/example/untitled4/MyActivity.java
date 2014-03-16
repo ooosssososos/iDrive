@@ -45,6 +45,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         t = this;
+        MyThread myThread = new MyThread();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
@@ -59,7 +60,7 @@ public class MyActivity extends Activity {
                 register();
             }
         });
-
+        myThread.run();
     }
 
 
@@ -69,6 +70,7 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 setContentView(R.layout.lobby);
                 ((TextView)findViewById(R.id.textView)).setText(Username + "'s ");
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username,1));
                 registerLobby();
             }
         });
@@ -87,14 +89,14 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 Username = ((EditText)findViewById(R.id.editText)).getText().toString();
                 code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
-                MyThread myThread = new MyThread();
+                /*
                 List<Integer> codes = myThread.run2();
                 for(Integer i: codes){
                     if (i == code) {
                         setContentView(R.layout.lobby);
                         registerLobby();
                     }
-                }
+                }*/
 
                 AlertDialog alertDialog = new AlertDialog.Builder(MyActivity.this).create();
 

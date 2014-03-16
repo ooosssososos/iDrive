@@ -33,12 +33,13 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         for(Instruction c : i){
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(c.a);
-            c.d = d.getText().toString();
+
             try {
                 // Add your data
                 StringEntity e = null;
                 switch(c.dat){
                     case 0:
+                        c.d = d.getText().toString();
                         e = new StringEntity(jsonResult(c.d).toString());
                         break;
                     case 1:
@@ -51,7 +52,18 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                 // Execute HTTP Post Request
                 httppost.addHeader("content-type", "application/json");
                 HttpResponse response = httpclient.execute(httppost);
-                System.out.println("Response : " + response.getEntity().getContent().toString());
+                System.out.println("Response : " + response.getStatusLine() + ", data : ");
+                BufferedReader r = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+                String tmp = r.readLine();
+                switch(c.dat){
+                    case 0:
+                        JSONObject obj = new JSONObject(tmp);
+                        MyActivity.ID = obj.getInt("id");
+                        break;
+                    case 1:
+                        e = new StringEntity(jsonResult1().toString());
+                        break;
+                }
 
             } catch (ClientProtocolException e) {
                 // TODO Auto-generated catch block
@@ -68,13 +80,11 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     private JSONObject jsonResult(String Name) throws JSONException {
         JSONObject json = null;
         Object cur_party = JSONObject.NULL;
-        int past_parties[] = {1};
-        int friends[] = {1};
+        int past_parties[] = {0};
         json = new JSONObject();
         json.put("cur_party",cur_party);
         json.put("past_parties",new JSONArray(past_parties));
         json.put("name",Name);
-        json.put("friends",new JSONArray(friends));
         System.out.println("Json: " + json);
         return json;
     }
@@ -84,17 +94,14 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         int active_member[] = {MyActivity.ID};
         json = new JSONObject();
         json.put("active_members",new JSONArray(active_member));
-        json.put("past_members", new JSONArray(past_parties));
-        System.out.println("Json: " + json);
+        System.out.println("Json1: " + json);
         return json;
     }
     private JSONObject jsonResult2(String Name) throws JSONException {
         JSONObject json = null;
-        int past_parties[] = {1};
         int active_member[] = {MyActivity.ID};
         json = new JSONObject();
         json.put("active_members",new JSONArray(active_member));
-        json.put("past_members", new JSONArray(past_parties));
         System.out.println("Json: " + json);
         return json;
     }

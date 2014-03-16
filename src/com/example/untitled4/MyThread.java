@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by ics on 15/03/14.
  */
-public class MyThread extends Thread{
+public class MyThread implements Runnable{
     @Override
     public void run(){
         while(true){

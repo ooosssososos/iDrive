@@ -114,8 +114,6 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     private JSONObject jsonResult2(Integer Code) throws JSONException {
         JSONObject json = null;
         json = new JSONObject();
-        json.put("active_members",new JSONArray(active_member));
-        json.put("past_members", new JSONArray(past_parties));
         System.out.println("Json: " + json);
         return json;
     }

@@ -45,6 +45,8 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                     case 1:
                         e = new StringEntity(jsonResult1().toString());
                         break;
+                    case 2:
+                        e = new StringEntity(jsonResult2(Integer.parseInt(d.getText().toString())).toString());
                 }
                 httppost.setEntity(e);
 
@@ -97,11 +99,11 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         System.out.println("Json1: " + json);
         return json;
     }
-    private JSONObject jsonResult2(String Name) throws JSONException {
+    private JSONObject jsonResult2(Integer Code) throws JSONException {
         JSONObject json = null;
-        int active_member[] = {MyActivity.ID};
         json = new JSONObject();
         json.put("active_members",new JSONArray(active_member));
+        json.put("past_members", new JSONArray(past_parties));
         System.out.println("Json: " + json);
         return json;
     }

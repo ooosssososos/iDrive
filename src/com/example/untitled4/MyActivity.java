@@ -35,11 +35,7 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Username = ((EditText)findViewById(R.id.editText)).getText().toString();
-                try {
-                    postData();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username));
                 setContentView(R.layout.main);
                 ((TextView)findViewById(R.id.textView)).setText(Username + "");
                 register();
@@ -48,30 +44,6 @@ public class MyActivity extends Activity {
 
     }
 
-    private JSONObject jsonResult(String Name) throws JSONException {
-        JSONObject json = null;
-        json = new JSONObject("{\"" + "name" + "\":" + "\"" + Name+ "\"" + "}");
-        return json;
-    }
-
-        public void postData() throws JSONException {
-        // Create a new HttpClient and Post Header
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/");
-        Username = ((EditText)findViewById(R.id.editText)).getText().toString();
-        try {
-            // Add your data
-            jsonResult(Username);
-
-            // Execute HTTP Post Request
-            HttpResponse response = httpclient.execute(httppost);
-
-        } catch (ClientProtocolException e) {
-            // TODO Auto-generated catch block
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-        }
-    }
 
     public void register(){
         ((ImageButton)findViewById(R.id.imageButton)).setOnClickListener(new View.OnClickListener() {

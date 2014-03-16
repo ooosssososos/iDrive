@@ -6,12 +6,17 @@ import android.widget.EditText;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 
 /**
@@ -27,13 +32,25 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         for(Instruction c : i){
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost(c.a);
+        HttpResponse response;
+
         c.d = d.getText().toString();
         try {
             // Add your data
-            jsonResult(c.d);
+            JSONObject temp = jsonResult(c.d);
 
+            HttpPost post = new HttpPost(("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/"));
+            StringEntity se = new StringEntity(temp.toString());
+            se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+            post.setEntity(se);
+            response = httpclient.execute(post);
+
+                    /*Checking response */
+            if(response!=null){
+                InputStream in = response.getEntity().getContent(); //Get the data in the entity
+            }
             // Execute HTTP Post Request
-            HttpResponse response = httpclient.execute(httppost);
+            //HttpResponse response = httpclient.execute(httppost);
 
         } catch (ClientProtocolException e) {
             // TODO Auto-generated catch block

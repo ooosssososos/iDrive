@@ -15,6 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c93e32d-2ca2-4071-8e52-1b11b630e787" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/join.xml" afterPath="$PROJECT_DIR$/res/layout/join.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/lobby.xml" afterPath="$PROJECT_DIR$/res/layout/lobby.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled4.iws" />
@@ -82,22 +85,16 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="11" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.7171904" vertical-offset="20" max-vertical-offset="561">
-              <folding>
-                <element signature="e#817#1042#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-              </folding>
+            <state line="54" column="43" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.5735786" vertical-offset="303" max-vertical-offset="901">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modes.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/modes.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="R.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/com/example/untitled4/R.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="393" selection-end="393" vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="1156">
+            <state line="5" column="19" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -123,7 +120,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="40" selection-start="1667" selection-end="1667" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="1054">
+            <state line="45" column="4" selection-start="2124" selection-end="2124" vertical-scroll-proportion="-10.444445" vertical-offset="483" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -131,11 +128,11 @@
       </file>
       <file leaf-file-name="join.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/join.xml">
-          <provider editor-type-id="android-designer">
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="399" selection-end="399" vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="799">
+          <provider editor-type-id="text-editor">
+            <state line="10" column="44" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -159,7 +156,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="748">
+            <state line="61" column="4" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-12.259259" vertical-offset="706" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
@@ -171,7 +168,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="22" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-8.555555" vertical-offset="840" max-vertical-offset="1411">
+            <state line="36" column="12" selection-start="1742" selection-end="1742" vertical-scroll-proportion="-4.7777777" vertical-offset="483" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
@@ -217,12 +214,12 @@
         <option value="$PROJECT_DIR$/res/layout/invite_friends.xml" />
         <option value="$PROJECT_DIR$/res/layout/party_confirmations.xml" />
         <option value="$PROJECT_DIR$/res/layout/select.xml" />
-        <option value="$PROJECT_DIR$/res/layout/lobby.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/layout/deals.xml" />
-        <option value="$PROJECT_DIR$/res/layout/join.xml" />
         <option value="$PROJECT_DIR$/res/layout/modes.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/lobby.xml" />
+        <option value="$PROJECT_DIR$/res/layout/join.xml" />
         <option value="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
       </list>
     </option>
@@ -661,7 +658,11 @@
       <created>1394927113139</created>
       <updated>1394927113139</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added more screens&#10;">
+      <created>1394927223436</created>
+      <updated>1394927223436</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -724,10 +725,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="37" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <folding>
-            <element signature="e#817#1042#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,10 +867,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="595">
-          <folding>
-            <element signature="e#817#1042#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,10 +903,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="28" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding>
-            <element signature="e#817#1042#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,12 +997,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding>
+            <element signature="e#295#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/start.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="40" selection-start="1667" selection-end="1667" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="1054">
+        <state line="36" column="12" selection-start="1742" selection-end="1742" vertical-scroll-proportion="-4.7777777" vertical-offset="483" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
@@ -1025,25 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/join.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="399" selection-end="399" vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding>
-            <element signature="e#295#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/modes.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1054,33 +1036,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="4" selection-start="2124" selection-end="2124" vertical-scroll-proportion="-10.444445" vertical-offset="483" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/lobby.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="221">
+        <state line="61" column="4" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-12.259259" vertical-offset="706" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/start.xml">
-      <provider editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/res/layout/join.xml">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/example/untitled4/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="22" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-8.555555" vertical-offset="840" max-vertical-offset="1411">
+        <state line="5" column="19" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.7171904" vertical-offset="20" max-vertical-offset="561">
-          <folding>
-            <element signature="e#817#1042#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-          </folding>
+        <state line="54" column="43" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.5735786" vertical-offset="303" max-vertical-offset="901">
+          <folding />
         </state>
       </provider>
     </entry>

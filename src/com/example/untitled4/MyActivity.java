@@ -1,6 +1,8 @@
 package com.example.untitled4;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -72,12 +74,45 @@ public class MyActivity extends Activity {
             }
         });
     }
+
     public void registerJoin(){
         ((Button)findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.lobby);
-                registerLobby();
+                Username = ((EditText)findViewById(R.id.editText)).getText().toString();
+                code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
+                MyThread myThread = new MyThread();
+                List<Integer> codes = myThread.run2();
+                for(Integer i: codes){
+                    if (i == code) {
+                        setContentView(R.layout.lobby);
+                        registerLobby();
+                    }
+                }
+
+                AlertDialog alertDialog = new AlertDialog.Builder(
+                        AlertDialogActivity.this).create();
+
+                // Setting Dialog Title
+                alertDialog.setTitle("Error");
+
+                // Setting Dialog Message
+                alertDialog.setMessage("Party Code Does Not Exist!");
+
+                // Setting Icon to Dialog
+                alertDialog.setIcon(R.drawable.logo);
+
+                // Setting OK Button
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to execute after dialog closed
+                        Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                // Showing Alert Message
+                alertDialog.show();
+
                 //Fill lobby with info TODO
 
 

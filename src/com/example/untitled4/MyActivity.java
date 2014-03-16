@@ -42,10 +42,11 @@ public class MyActivity extends Activity {
     private static String KEY_ERROR = "error";
     private static String KEY_ERROR_MSG = "error_msg";
     private static String KEY_UID = "uid";
+    MyThread m  = new MyThread();
+    UpdateThread n = new UpdateThread();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         t = this;
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
         Button bu = (Button)findViewById(R.id.button);
@@ -80,6 +81,8 @@ public class MyActivity extends Activity {
                 registerJoin();
             }
         });
+        m.run();
+        n.run();
     }
 
     public void registerJoin(){

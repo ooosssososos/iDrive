@@ -145,6 +145,7 @@ public class DrinkOrDriveWebService {
 		JSONArray obj;
 		try {
 			// parses the name, location, lat, lon, and timestamp of each Waldo generated
+            System.out.println((JSONArray) (new JSONTokener(input).nextValue()));
 			obj = (JSONArray) (new JSONTokener(input).nextValue());
 			System.out.println(obj.toString());
 			if (obj.length() != 0) {

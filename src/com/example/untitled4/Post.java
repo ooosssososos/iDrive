@@ -36,12 +36,10 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         for(Instruction c : i){
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(c.a);
-            String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
-            Integer code = 6195;
-            basePartyUrl.concat(code.toString());
-            System.out.println(basePartyUrl);
-            HttpGet httpget = new HttpGet(basePartyUrl);
 
+            String tmp = "";
+
+            c.d = d.getText().toString();
 
             try {
                 // Add your data
@@ -50,22 +48,41 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                     case 0:
                         c.d = d.getText().toString();
                         e = new StringEntity(jsonResult(c.d).toString());
+
+                        // Execute HTTP Post Request
+                        httppost.addHeader("content-type", "application/json");
+                        HttpResponse response0 = httpclient.execute(httppost);
+                        System.out.println("Response : " + response0.getStatusLine() + ", data : ");
+                        BufferedReader r = new BufferedReader(new InputStreamReader(response0.getEntity().getContent()));
+                        tmp = r.readLine();
+
+                        httppost.setEntity(e);
                         break;
                     case 1:
                         e = new StringEntity(jsonResult1().toString());
+
+                        // Execute HTTP Post Request
+                        httppost.addHeader("content-type", "application/json");
+                        HttpResponse response1 = httpclient.execute(httppost);
+                        System.out.println("Response : " + response1.getStatusLine() + ", data : ");
+                        BufferedReader r1= new BufferedReader(new InputStreamReader(response1.getEntity().getContent()));
+                        tmp = r1.readLine();
+
+                        httppost.setEntity(e);
                         break;
                     case 2:
-                        e = new StringEntity(jsonResult2(Integer.parseInt(d.getText().toString())).toString());
+                        String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
+                        basePartyUrl.concat(d.toString());
+                        System.out.println(basePartyUrl);
+                        HttpGet httpget = new HttpGet(basePartyUrl);
+                        HttpResponse response2 = httpclient.execute(httpget);
+
+                        BufferedReader r2= new BufferedReader(new InputStreamReader(response2.getEntity().getContent()));
+                        tmp = r2.readLine();
+
                 }
-                httppost.setEntity(e);
 
 
-                // Execute HTTP Post Request
-                httppost.addHeader("content-type", "application/json");
-                HttpResponse response = httpclient.execute(httppost);
-                System.out.println("Response : " + response.getStatusLine() + ", data : ");
-                BufferedReader r = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-                String tmp = r.readLine();
                 switch(c.dat){
                     case 0:
                         JSONObject obj = new JSONObject(tmp);
@@ -76,6 +93,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         break;
                     case 2:
                         party = new JSONObject(tmp);
+                        System.out.println(party);
 
                 }
 

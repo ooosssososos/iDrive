@@ -33,6 +33,7 @@ public class MyActivity extends Activity {
     public static MyActivity t;
     public static String Username = "";
     public static int code = 0;
+    public static String codeString = "";
     public static int ID = -1;
     public static List<Promotion> promos;
     public static List<Party> parties;
@@ -90,7 +91,8 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partys/",Username,2));
+                codeString = ((EditText)findViewById(R.id.Name)).getText().toString();
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
 
 
 

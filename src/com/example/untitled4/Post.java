@@ -39,7 +39,6 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
 
             String tmp = "";
 
-            c.d = d.getText().toString();
 
             try {
                 // Add your data
@@ -89,7 +88,9 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         MyActivity.ID = obj.getInt("id");
                         break;
                     case 1:
-                        e = new StringEntity(jsonResult1().toString());
+
+                        JSONObject z = new JSONObject(tmp);
+                        MyActivity.code = z.getInt("code");
                         break;
                     case 2:
                         party = new JSONObject(tmp);

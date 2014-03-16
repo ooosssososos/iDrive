@@ -8,20 +8,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
+import oliver.DrinkOrDriveWebService;
 import oliver.Party;
 import oliver.PartyUser;
 import oliver.Promotion;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +35,6 @@ public class MyActivity extends Activity {
     private static String KEY_ERROR_MSG = "error_msg";
     private static String KEY_UID = "uid";
     MyThread m  = new MyThread();
-    UpdateThread n = new UpdateThread();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         t = this;
@@ -61,6 +51,7 @@ public class MyActivity extends Activity {
                 register();
             }
         });
+        new UpdateThread().start();
 
     }
 
@@ -82,8 +73,7 @@ public class MyActivity extends Activity {
                 registerJoin();
             }
         });
-        m.run();
-        n.run();
+        new UpdateThread().start();
     }
 
     public void registerJoin(){
@@ -134,9 +124,11 @@ public class MyActivity extends Activity {
     }
     public void update(){
         View v = getWindow().getDecorView().getRootView();
+        System.out.println("UPDATED");
         if(v.getId() == R.layout.lobby){
+            System.out.println("LobbyViewConfirmed");
             //Update Lobby
-
+            ((TextView)findViewById(R.id.textView4)).setText(MyActivity.code);
             final ArrayList<String> list = new ArrayList<String>();
             Party p = null;
             for(Party s : parties){
@@ -191,6 +183,45 @@ class StableArrayAdapter extends ArrayAdapter<String> {
         return true;
     }
 
+}
+class UpdateThread extends Thread {
+
+
+    @Override
+    public void run() {
+        while(true){
+            System.out.println("UpdateThread" + MyActivity.t);
+            MyActivity.t.update();
+
+            try{
+                Thread.sleep(1000);
+            }catch(Exception e){
+
+            }
+        }
+    }
+}
+class MyThread extends Thread{
+
+
+
+    @Override
+    public void run() {
+        while(true){
+            DrinkOrDriveWebService wb = new DrinkOrDriveWebService();
+            wb.parseParty();
+            MyActivity.parties = wb.getParties();
+            wb.parsePartyUsers();
+            MyActivity.users = wb.getPartyUsers();
+            wb.parsePromotion();
+            MyActivity.promos =  wb.getPromos();
+            try{
+                Thread.sleep(1000);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
 }
 
 

@@ -1,4 +1,5 @@
 package oliver;
+import android.os.AsyncTask;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,6 +28,7 @@ public class DrinkOrDriveWebService {
 	List<PartyUser> listOfPartyUsers;
 	List<Party> listOfParties;
 	List<Promotion> listOfPromotions;
+    public static JS j = new JS();
 
 
 	
@@ -43,7 +45,7 @@ public class DrinkOrDriveWebService {
 		// builds the URL to initialize session in the Waldo API 
 		StringBuilder urlBuilder = new StringBuilder(DRINK_OR_DRIVE_WEB_SERVICE);
 		urlBuilder.append("/baruser/");
-		String input = makeJSONQuery(urlBuilder);
+		String input = j.doInBackground((urlBuilder));
 		JSONArray obj;
 		try {
 			// parses the name, location, lat, lon, and timestamp of each Waldo generated
@@ -52,7 +54,6 @@ public class DrinkOrDriveWebService {
 			if (obj.length() != 0) {
 				// For all Waldos generated
 				for (int i = 0, var = obj.length(); i<var; i++) {
-					System.out.println("sdfgh");
 
 					JSONObject barUser = obj.getJSONObject(i);
 					System.out.println(obj.length());
@@ -95,7 +96,7 @@ public class DrinkOrDriveWebService {
 		// builds the URL to initialize session in the Waldo API 
 		StringBuilder urlBuilder = new StringBuilder(DRINK_OR_DRIVE_WEB_SERVICE);
 		urlBuilder.append("/partyuser/");
-		String input = makeJSONQuery(urlBuilder);
+		String input = j.doInBackground(urlBuilder);
 		JSONArray obj;
 		try {
 			// parses the name, location, lat, lon, and timestamp of each Waldo generated
@@ -141,21 +142,23 @@ public class DrinkOrDriveWebService {
 		// builds the URL to initialize session in the Waldo API 
 		StringBuilder urlBuilder = new StringBuilder(DRINK_OR_DRIVE_WEB_SERVICE);
 		urlBuilder.append("/party/");
-		String input = makeJSONQuery(urlBuilder);
+		String input = j.doInBackground(urlBuilder);
 		JSONArray obj;
 		try {
 			// parses the name, location, lat, lon, and timestamp of each Waldo generated
-            System.out.println((JSONArray) (new JSONTokener(input).nextValue()));
 			obj = (JSONArray) (new JSONTokener(input).nextValue());
-			System.out.println(obj.toString());
 			if (obj.length() != 0) {
 				// For all Waldos generated
 				for (int i = 0, var = obj.length(); i<var; i++) {
 
 					JSONObject party = obj.getJSONObject(i);
 					int partyId = party.getInt("id");
-					
-					int barId = party.getInt("cur_checkin_bar");
+
+                    int barId = -1;
+					try{
+					 barId = party.getInt("cur_checkin_bar");
+                    }catch(Exception e){
+                    }
 					
 					boolean isClosed = party.getBoolean("closed");
 					int code = party.getInt("code");
@@ -199,7 +202,7 @@ public class DrinkOrDriveWebService {
 		// builds the URL to initialize session in the Waldo API 
 		StringBuilder urlBuilder = new StringBuilder(DRINK_OR_DRIVE_WEB_SERVICE);
 		urlBuilder.append("/promotion/");
-		String input = makeJSONQuery(urlBuilder);
+		String input =j.doInBackground(urlBuilder);
 		JSONArray obj;
 		try {
 			// parses the name, location, lat, lon, and timestamp of each Waldo generated
@@ -268,20 +271,25 @@ public class DrinkOrDriveWebService {
 	 * @param urlBuilder The query with everything but http:
 	 * @return The JSON returned from the query 
 	 */
-	private static String makeJSONQuery(StringBuilder urlBuilder) {
-		try {
-			URL url = new URL(urlBuilder.toString());
-			HttpURLConnection client = (HttpURLConnection) url.openConnection();
-			client.setRequestProperty("accept", "application/json");
-			InputStream in = client.getInputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			String returnString = br.readLine();
-			client.disconnect();
-			return returnString;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-        return null;
-	}
 
+
+}
+class JS extends AsyncTask<StringBuilder, Void, String>{
+
+    @Override
+    protected String doInBackground(StringBuilder... urlBuilder) {
+        try {
+            URL url = new URL(urlBuilder[0].toString());
+            HttpURLConnection client = (HttpURLConnection) url.openConnection();
+            client.setRequestProperty("accept", "application/json");
+            InputStream in = client.getInputStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            String returnString = br.readLine();
+            client.disconnect();
+            return returnString;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

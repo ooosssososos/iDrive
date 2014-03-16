@@ -1,5 +1,6 @@
 package com.example.untitled4;
 
+import android.os.AsyncTask;
 import oliver.DrinkOrDriveWebService;
 import oliver.Party;
 
@@ -9,9 +10,11 @@ import java.util.List;
 /**
  * Created by ics on 15/03/14.
  */
-public class MyThread implements Runnable{
+public class mthr extends AsyncTask<Void, Void, Void>{
+
+
     @Override
-    public void run(){
+    protected Void doInBackground(Void... voids) {
         while(true){
             DrinkOrDriveWebService wb = new DrinkOrDriveWebService();
             wb.parseParty();
@@ -19,9 +22,9 @@ public class MyThread implements Runnable{
             wb.parsePartyUsers();
             MyActivity.users = wb.getPartyUsers();
             wb.parsePromotion();
-           MyActivity.promos =  wb.getPromos();
+            MyActivity.promos =  wb.getPromos();
             try{
-            Thread.sleep(1000);
+                Thread.sleep(10000);
             }catch(Exception e){
                 e.printStackTrace();
             }

@@ -47,9 +47,11 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     }
     private JSONObject jsonResult(String Name) throws JSONException {
         JSONObject json = new JSONObject();
-        json.put("cur_party", new Integer(1));
-        json.put("past_parties", new Integer[1]);
-        json.put("friends", new Integer[1]);
+        int[] past_parties = new int[1];
+        int[] friends = new int[1];
+        json.put("cur_party", 1);
+        json.put("past_parties", past_parties);
+        json.put("friends", friends);
         json.put("name", Name);
         System.out.println(json.toString());
         return json;

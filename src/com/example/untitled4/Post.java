@@ -6,6 +6,7 @@ import android.widget.EditText;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -28,11 +29,19 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     public Post(EditText v){
         d = v;
     }
+
+    JSONObject party = null;
     @Override
     protected Long doInBackground(Instruction... i) {
         for(Instruction c : i){
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(c.a);
+            String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
+            Integer code = 6195;
+            basePartyUrl.concat(code.toString());
+            System.out.println(basePartyUrl);
+            HttpGet httpget = new HttpGet(basePartyUrl);
+
 
             try {
                 // Add your data
@@ -65,6 +74,9 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                     case 1:
                         e = new StringEntity(jsonResult1().toString());
                         break;
+                    case 2:
+                        party = new JSONObject(tmp);
+
                 }
 
             } catch (ClientProtocolException e) {

@@ -67,7 +67,7 @@ public class MyActivity extends Activity {
         ((ImageButton)findViewById(R.id.imageButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username,1));
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",Username,1));
                 setContentView(R.layout.lobby);
                 ((TextView)findViewById(R.id.textView)).setText(Username + "'s ");
                 registerLobby();
@@ -87,7 +87,7 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View v) {
                 code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partyuser/",Username,2));
+                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/partys/",Username,2));
 
 
 

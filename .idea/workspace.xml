@@ -17,8 +17,6 @@
     <list default="true" id="5c93e32d-2ca2-4071-8e52-1b11b630e787" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled4.iws" />
@@ -83,10 +81,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="41" selection-start="3867" selection-end="3867" vertical-scroll-proportion="1.2958115" vertical-offset="0" max-vertical-offset="2340">
+            <state line="89" column="155" selection-start="3505" selection-end="3505" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2340">
               <folding />
             </state>
           </provider>
@@ -119,10 +117,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Post.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="20" selection-start="3211" selection-end="3211" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1605">
+            <state line="42" column="56" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.44401544" vertical-offset="0" max-vertical-offset="1770">
               <folding />
             </state>
           </provider>
@@ -701,7 +699,11 @@
       <created>1394950714603</created>
       <updated>1394950714603</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1394989904725</created>
+      <updated>1394989904725</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,6 +721,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -732,7 +735,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1091,16 +1093,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="20" selection-start="3211" selection-end="3211" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1605">
+        <state line="89" column="155" selection-start="3505" selection-end="3505" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/MyActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="41" selection-start="3867" selection-end="3867" vertical-scroll-proportion="1.2958115" vertical-offset="0" max-vertical-offset="2340">
+        <state line="42" column="56" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.44401544" vertical-offset="0" max-vertical-offset="1770">
           <folding />
         </state>
       </provider>

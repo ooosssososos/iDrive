@@ -47,7 +47,13 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     }
     private JSONObject jsonResult(String Name) throws JSONException {
         JSONObject json = null;
-        json = new JSONObject("{\"" + "name" + "\":" + "\"" + Name+ "\"" + "}");
+        int cur_party = 0;
+        int past_parties[] = null;
+        int friends[] = null;
+        json = new JSONObject("{\"" + "cur_party" + "\":" + "\"" + cur_party+ "\""
+                + "," + "\"" + "past_parties" + "\":" + past_parties + "," + "\"" + "friends"
+                + "\":" + "\"" + friends+ "," + "\"" + "name"
+                + "\":" + "\"" + Name+ "\"" + "}");
         return json;
     }
 }

@@ -92,8 +92,10 @@ public class MyActivity extends Activity {
             public void onClick(View v) {
                 code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
                 codeString = ((EditText)findViewById(R.id.Name)).getText().toString();
-                new Post((EditText)findViewById(R.id.editText)).execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
+                Post post = new Post((EditText)findViewById(R.id.editText));
+                post.execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
 
+                if (post.party == null){
 
 
                 AlertDialog alertDialog = new AlertDialog.Builder(MyActivity.this).create();
@@ -117,7 +119,10 @@ public class MyActivity extends Activity {
 
                 // Showing Alert Message
                 alertDialog.show();
+                } else { setContentView(R.layout.lobby);
+                    registerLobby();
 
+                }
                 //Fill lobby with info TODO
 
 

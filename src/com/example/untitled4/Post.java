@@ -50,24 +50,26 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
 
                         // Execute HTTP Post Request
                         httppost.addHeader("content-type", "application/json");
+                        httppost.setEntity(e);
                         HttpResponse response0 = httpclient.execute(httppost);
                         System.out.println("Response : " + response0.getStatusLine() + ", data : ");
                         BufferedReader r = new BufferedReader(new InputStreamReader(response0.getEntity().getContent()));
                         tmp = r.readLine();
 
-                        httppost.setEntity(e);
+
                         break;
                     case 1:
                         e = new StringEntity(jsonResult1().toString());
 
                         // Execute HTTP Post Request
                         httppost.addHeader("content-type", "application/json");
+
+                        httppost.setEntity(e);
                         HttpResponse response1 = httpclient.execute(httppost);
                         System.out.println("Response : " + response1.getStatusLine() + ", data : ");
                         BufferedReader r1= new BufferedReader(new InputStreamReader(response1.getEntity().getContent()));
                         tmp = r1.readLine();
 
-                        httppost.setEntity(e);
                         break;
                     case 2:
                         String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
@@ -78,6 +80,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
 
                         BufferedReader r2= new BufferedReader(new InputStreamReader(response2.getEntity().getContent()));
                         tmp = r2.readLine();
+                        break;
 
                 }
 
@@ -101,7 +104,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                             party = null;
                         }
                         System.out.println(party);
-
+                        break;
                 }
 
             } catch (ClientProtocolException e) {
@@ -118,11 +121,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
 
     private JSONObject jsonResult(String Name) throws JSONException {
         JSONObject json = null;
-        Object cur_party = JSONObject.NULL;
-        int past_parties[] = {0};
         json = new JSONObject();
-        json.put("cur_party",cur_party);
-        json.put("past_parties",new JSONArray(past_parties));
         json.put("name",Name);
         System.out.println("Json: " + json);
         return json;

@@ -12,6 +12,8 @@ import oliver.DrinkOrDriveWebService;
 import oliver.Party;
 import oliver.PartyUser;
 import oliver.Promotion;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +29,7 @@ public class MyActivity extends Activity {
     public static String codeString = "";
     public static int ID = -1;
     public static List<Promotion> promos;
+    public static int status = -1;
     public static List<Party> parties;
     public static JSONObject partyJSONObject;
     public static Party partyRealObject;
@@ -36,7 +39,6 @@ public class MyActivity extends Activity {
     private static String KEY_ERROR = "error";
     private static String KEY_ERROR_MSG = "error_msg";
     private static String KEY_UID = "uid";
-    MyThread m  = new MyThread();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         t = this;
@@ -53,7 +55,7 @@ public class MyActivity extends Activity {
                 register();
             }
         });
-        new UpdateThread().start();
+        new MyThread().start();
 
     }
 
@@ -66,6 +68,7 @@ public class MyActivity extends Activity {
                 setContentView(R.layout.lobby);
                 ((TextView)findViewById(R.id.textView)).setText(Username + "'s ");
                 registerLobby();
+                status = 1;
             }
         });
         ((ImageButton)findViewById(R.id.imageButton2)).setOnClickListener(new View.OnClickListener() {
@@ -147,32 +150,36 @@ public class MyActivity extends Activity {
         });
     }
     public void update(){
-        View v = getWindow().getDecorView().getRootView();
         System.out.println("UPDATED");
-        if(v.getId() == R.layout.lobby){
+        if(MyActivity.status == 1){
+            MyActivity.this.runOnUiThread(new Runnable(){
+                public void run(){
+                    ((TextView)findViewById(R.id.textView4)).setText(MyActivity.code+"");
+                    final ArrayList<String> list = new ArrayList<String>();
+                    Party p = null;
+                    for(Party s : parties){
+                        if(s.getCode() == code){
+                            p = s;
+                            break;
+                        }
+                    }
+                    for (int i : p.listOfPartyUsersId) {
+                        for(PartyUser z : users){
+                            if(z.getId() == i){
+                                list.add(z.getName());
+                                break;
+                            }
+                        }
+                    }
+                    ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(MyActivity.this, android.R.layout.simple_list_item_1,list ));
+                }
+            });
             System.out.println("LobbyViewConfirmed");
             //Update Lobby
-            ((TextView)findViewById(R.id.textView4)).setText(MyActivity.code);
-            final ArrayList<String> list = new ArrayList<String>();
-            Party p = null;
-//            for(Party s : parties){
-//                if(s.getCode() == code){
-//                    p = s;
-//                    break;
-//                }
-//            }
-            p = partyRealObject;
+            System.out.println(((TextView)findViewById(R.id.textView4)).getText());
 
-            for (int i : p.listOfPartyUsersId) {
-                for(PartyUser z : users){
-                    if(z.getId() == i){
-                        list.add(z.getName());
-                        break;
-                    }
-                }
-            }
-            ((ListView)findViewById(R.id.listView)).setAdapter(new StableArrayAdapter(this, android.R.layout.simple_list_item_1,list ));
-        }else if(v.getId() == R.layout.deals){
+
+        }else if(MyActivity.status == 2){
             //Update Deals
 
             final ArrayList<String> list = new ArrayList<String>();
@@ -241,6 +248,7 @@ class MyThread extends Thread{
             MyActivity.users = wb.getPartyUsers();
             wb.parsePromotion();
             MyActivity.promos =  wb.getPromos();
+            System.out.println("MythreadRan");
             try{
                 Thread.sleep(1000);
             }catch(Exception e){

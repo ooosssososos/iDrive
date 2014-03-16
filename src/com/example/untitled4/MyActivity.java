@@ -90,14 +90,13 @@ public class MyActivity extends Activity {
                     }
                 }
 
-                AlertDialog alertDialog = new AlertDialog.Builder(
-                        AlertDialogActivity.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(MyActivity.this).create();
 
                 // Setting Dialog Title
                 alertDialog.setTitle("Error");
 
                 // Setting Dialog Message
-                alertDialog.setMessage("Party Code Does Not Exist!");
+                alertDialog.setMessage("Party Code Does Not Exist");
 
                 // Setting Icon to Dialog
                 alertDialog.setIcon(R.drawable.logo);

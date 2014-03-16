@@ -15,7 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c93e32d-2ca2-4071-8e52-1b11b630e787" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" afterPath="$PROJECT_DIR$/src/com/example/untitled4/Post.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled4.iws" />
@@ -92,7 +91,7 @@
       <file leaf-file-name="Post.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="39" selection-start="1673" selection-end="1673" vertical-scroll-proportion="0.5906433" vertical-offset="492" max-vertical-offset="1050">
+            <state line="52" column="31" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.5614035" vertical-offset="492" max-vertical-offset="1050">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -521,7 +520,11 @@
       <created>1394938169983</created>
       <updated>1394938169983</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1394938605479</created>
+      <updated>1394938605479</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -935,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/untitled4/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="39" selection-start="1673" selection-end="1673" vertical-scroll-proportion="0.5906433" vertical-offset="492" max-vertical-offset="1050">
+        <state line="52" column="31" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.5614035" vertical-offset="492" max-vertical-offset="1050">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

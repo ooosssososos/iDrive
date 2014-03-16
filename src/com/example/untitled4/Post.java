@@ -36,14 +36,23 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
             c.d = d.getText().toString();
             try {
                 // Add your data
-                StringEntity e = new StringEntity(jsonResult(c.d).toString());
+                StringEntity e = null;
+                switch(c.dat){
+                    case 0:
+                        e = new StringEntity(jsonResult(c.d).toString());
+                        break;
+                    case 1:
+                        e = new StringEntity(jsonResult1().toString());
+                        break;
+                }
                 httppost.setEntity(e);
 
 
                 // Execute HTTP Post Request
                 httppost.addHeader("content-type", "application/json");
                 HttpResponse response = httpclient.execute(httppost);
-                System.out.println("Status :" + response.getStatusLine());
+                JSONObject obj = new JSONObject(response.getEntity().getContent().toString());
+                MyActivity.code = Integer.parseInt((String)obj.get("code"));
 
             } catch (ClientProtocolException e) {
                 // TODO Auto-generated catch block
@@ -70,12 +79,34 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
         System.out.println("Json: " + json);
         return json;
     }
+    private JSONObject jsonResult1() throws JSONException {
+        JSONObject json = null;
+        int past_parties[] = {1};
+        int active_member[] = {MyActivity.ID};
+        json = new JSONObject();
+        json.put("active_members",new JSONArray(active_member));
+        json.put("past_members", new JSONArray(past_parties));
+        System.out.println("Json: " + json);
+        return json;
+    }
+    private JSONObject jsonResult2(String Name) throws JSONException {
+        JSONObject json = null;
+        int past_parties[] = {1};
+        int active_member[] = {MyActivity.ID};
+        json = new JSONObject();
+        json.put("active_members",new JSONArray(active_member));
+        json.put("past_members", new JSONArray(past_parties));
+        System.out.println("Json: " + json);
+        return json;
+    }
 }
 class Instruction{
     String a;
     String d;
-    public Instruction(String URL, String Data){
+    int dat;
+    public Instruction(String URL, String Data, int in){
         a = URL;
         d = Data;
+        dat = in;
     }
 }

@@ -15,9 +15,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.15"/>
         <ImageView
-                android:layout_width="215dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView" android:layout_gravity="center_horizontal" android:layout_weight="0.42"
+                android:layout_width="194dp"
+                android:layout_height="345dp"
+                android:id="@+id/imageView" android:layout_gravity="center_horizontal"
                 android:src="@drawable/logo"/>
         <Space
                 android:layout_width="match_parent"

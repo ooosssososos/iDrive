@@ -95,6 +95,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         JSONArray partyArray = new JSONArray(tmp);
                         try {
                             party = partyArray.getJSONObject(0);
+
                         } catch(JSONException je) {
                             party = null;
                         }

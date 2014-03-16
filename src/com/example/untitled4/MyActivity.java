@@ -31,6 +31,7 @@ public class MyActivity extends Activity {
     public static List<Promotion> promos;
     public static int status = -1;
     public static List<Party> parties;
+    public static boolean a = false;
     public static JSONObject partyJSONObject;
     public static Party partyRealObject;
     public static List<PartyUser> users;
@@ -85,12 +86,13 @@ public class MyActivity extends Activity {
         ((Button)findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                code = Integer.parseInt(((EditText)findViewById(R.id.Name)).getText().toString());
+                code = Integer.parseInt(((EditText) findViewById(R.id.Name)).getText().toString());
+                System.out.println("codesda: " + code);
                 codeString = ((EditText)findViewById(R.id.Name)).getText().toString();
-                Post post = new Post((EditText)findViewById(R.id.editText));
-                post.execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2));
-                partyJSONObject = post.party;
-
+                Post post = new Post();
+                post.execute(new Instruction("http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/",codeString,2)); 
+                while(a == false);
+                System.out.println("irfe: " + partyJSONObject);
                 try {
 
                     int partyId = partyJSONObject.getInt("id");
@@ -99,10 +101,10 @@ public class MyActivity extends Activity {
 
                     boolean isClosed = partyJSONObject.getBoolean("closed");
                     int code = partyJSONObject.getInt("code");
-
                     partyRealObject = new Party(partyId, barId, isClosed, code);
+                    System.out.println("irfe: " + partyId + "check + " + partyRealObject);
 
-                } catch(JSONException je) {
+                } catch(Exception je) {
                     partyRealObject = null;
                 }
 

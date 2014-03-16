@@ -29,6 +29,7 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
     public Post(EditText v){
         d = v;
     }
+    public Post(){}
 
     public JSONObject party = null;
     @Override
@@ -73,13 +74,16 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         break;
                     case 2:
                         String basePartyUrl = "http://idrivedjango-env-qrs5vkxvvi.elasticbeanstalk.com/api/party/";
-                        basePartyUrl.concat(d.toString());
-                        System.out.println(basePartyUrl);
+                        basePartyUrl+="?code=";
+                        basePartyUrl+=MyActivity.code;
+
+                        System.out.println("hello: " + basePartyUrl);
                         HttpGet httpget = new HttpGet(basePartyUrl);
                         HttpResponse response2 = httpclient.execute(httpget);
 
                         BufferedReader r2= new BufferedReader(new InputStreamReader(response2.getEntity().getContent()));
                         tmp = r2.readLine();
+                        System.out.println("msg2: " + tmp);
                         break;
 
                 }
@@ -96,14 +100,14 @@ public class Post extends AsyncTask<Instruction, Integer, Long>{
                         MyActivity.code = z.getInt("code");
                         break;
                     case 2:
-                        JSONArray partyArray = new JSONArray(tmp);
-                        try {
-                            party = partyArray.getJSONObject(0);
-
-                        } catch(JSONException je) {
-                            party = null;
+                        try{
+                        MyActivity.partyJSONObject = new JSONObject(tmp.substring(1,tmp.length()-1));
+                        }catch(Exception fe){
+                            MyActivity.partyJSONObject = null;
                         }
-                        System.out.println(party);
+                        MyActivity.a=true;
+                        MyActivity.status = 1;
+                        System.out.println("irfe2: " + MyActivity.partyJSONObject);
                         break;
                 }
 
